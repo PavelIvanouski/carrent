@@ -1,16 +1,14 @@
 package myapp.model.dao;
 
 import myapp.model.entity.Engine;
-import myapp.model.entity.Model;
+
 
 import java.util.List;
 
-public interface EngineDao {
-     void delete(Engine engine);
+public interface EngineDao extends GenericDao<Engine>{
 
-     void createOrUpdate(Engine engine) ;
 
-     Model getEngineById(int id);
+     Engine getEngineById(int id);
 
      List<Engine> getAll();
 }

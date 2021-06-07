@@ -1,11 +1,12 @@
 package myapp.model.dao.impl;
 
+import myapp.model.dao.EngineDao;
 import myapp.model.entity.Engine;
 import myapp.model.entity.Model;
 
 import java.util.List;
 
-public class EngineDaoImpl {
+public class EngineDaoImpl implements EngineDao {
     public void delete(Engine engine) {
 
     }
@@ -14,7 +15,7 @@ public class EngineDaoImpl {
 
     }
 
-    public Model getEngineById(int id) {
+    public Engine getEngineById(int id) {
 
         return null;
     }

@@ -20,7 +20,7 @@ public class EngineService {
         dao.createOrUpdate(engine);
     }
 
-    public Model getModelById(int id) {
+    public Engine getModelById(int id) {
         if (id > 0) {
             return dao.getEngineById(id);
         }
