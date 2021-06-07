@@ -7,6 +7,8 @@ public class Engine {
     @Getter
     @Setter
     private int id;
+    @Getter
+    @Setter
     private String name;
 
 //    public int getId() {

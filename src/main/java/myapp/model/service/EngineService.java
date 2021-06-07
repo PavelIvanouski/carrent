@@ -4,6 +4,7 @@ import myapp.model.dao.EngineDao;
 import myapp.model.entity.Engine;
 import myapp.model.entity.Model;
 
+import java.sql.SQLException;
 import java.util.List;
 
 public class EngineService {
@@ -20,7 +21,7 @@ public class EngineService {
         dao.createOrUpdate(engine);
     }
 
-    public Engine getModelById(int id) {
+    public Engine getModelById(int id) throws SQLException {
         if (id > 0) {
             return dao.getEngineById(id);
         }
@@ -32,4 +33,8 @@ public class EngineService {
         return dao.getAll();
     }
 
+    public void update(Engine engine) {
+        dao.createOrUpdate(engine);
+
+    }
 }
