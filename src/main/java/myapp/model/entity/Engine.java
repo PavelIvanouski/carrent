@@ -6,12 +6,7 @@ import javax.persistence.*;
 import java.util.List;
 
 
-@Getter
-@Setter
-@Builder
-@AllArgsConstructor
-@NoArgsConstructor
-@EqualsAndHashCode
+@Data
 @Entity
 @Table
 public class Engine {
@@ -21,7 +16,7 @@ public class Engine {
     private int id;
     @Column(nullable = false)
     private String name;
-
+    @OneToMany(mappedBy = "engine", cascade = CascadeType.ALL)
     private List<Model> models;
 
 

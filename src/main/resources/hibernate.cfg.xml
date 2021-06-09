@@ -14,7 +14,13 @@
 
         <property name="hibernate.current_session_context_class">thread</property>
         <mapping class="myapp.model.entity.Engine"/>
-
+        <mapping class="myapp.model.entity.Type"/>
+        <mapping class="myapp.model.entity.Model"/>
+        <mapping class="myapp.model.entity.Car"/>
+        <mapping class="myapp.model.entity.Customer"/>
+        <mapping class="myapp.model.entity.Role"/>
+        <mapping class="myapp.model.entity.Status"/>
+        <mapping class="myapp.model.entity.Rent"/>
     </session-factory>
 
 </hibernate-configuration>

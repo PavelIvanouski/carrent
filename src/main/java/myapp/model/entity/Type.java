@@ -3,14 +3,10 @@ package myapp.model.entity;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.List;
 
 
-@Getter
-@Setter
-@Builder
-@AllArgsConstructor
-@NoArgsConstructor
-@EqualsAndHashCode
+@Data
 @Entity
 @Table
 public class Type {
@@ -20,8 +16,8 @@ public class Type {
     private int id;
     @Column(nullable = false)
     private String name;
-
-
+    @OneToMany(mappedBy = "type", cascade = CascadeType.ALL)
+    private List<Model> models;
 
 
 }
